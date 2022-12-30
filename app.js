@@ -1,16 +1,15 @@
-const loginForm = document.getElementById("login-form");
-const loginButton = document.getElementById("login-form-submit");
-const loginErrorMsg = document.getElementById("login-error-msg");
+const name = document.getElementById('name');
+const passord = document.getElementById('password');
+const form = document.getElementById('form');
 
-loginButton.addEventListener("click", (e) => {
-    e.preventDefault();
-    const username = loginForm.username.value;
-    const password = loginForm.password.value;
-
-    if (username === "user" && password === "web_dev") {
-        alert("You have successfully logged in.");
-        location.reload();
-    } else {
-        loginErrorMsg.style.opacity = 1;
+form.addEventListener(submit,(e) =>{
+    let messages = [];
+    if(name.value === ' '|| name.vaule == null){
+        messages.push('Name is required');
     }
+    if(password.value.length <= 6){
+        messages.push('Password must be longer than 6 characters');
+    }
+    
+
 })
