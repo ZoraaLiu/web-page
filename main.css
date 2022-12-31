@@ -17,8 +17,9 @@ body {
 
 h1{ 
 	font-size: 2.5rem;
-	font-weight: 300;
+	font-weight: 400;
 	margin-bottom: 3rem;
+    color:var(--grey);
 }
 
 #form {
@@ -133,4 +134,18 @@ main {
 
 .task .actions .delete {
 	color: rgb(225, 84, 112);
+}
+button{
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline;
+  cursor: pointer;
+}
+button :hover{
+   color: #f5d8e7;
 }
