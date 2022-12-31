@@ -18,7 +18,7 @@ body {
 h1{ 
 	font-size: 2.5rem;
 	font-weight: 300;
-	margin-bottom: 1rem;
+	margin-bottom: 3rem;
 }
 
 #form {
@@ -41,11 +41,6 @@ input, button {
 	color: var(--light);
 	font-size: 1.25rem;
 }
-
-#new-task-input::placeholder {
-	color: var(--grey);
-}
-
 #new-task-submit {
 	color: var(--pink);
 	font-size: 1.25rem;

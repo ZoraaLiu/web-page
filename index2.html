@@ -7,6 +7,7 @@
 	<title>My daily plan</title>
 
 	<link rel="stylesheet" href="main.css" />
+    <script src="script2.js"></script>
 </head>
 <body>
 	
@@ -14,7 +15,7 @@
 		<h1>My daily plan</h1>
     </header>
 	<main>
-        <form id=" form">
+        <form id="form">
 			<input 
 				type="text" 
 				name="new-task-input" 
@@ -39,6 +40,9 @@
 							readonly>
 					</div>
 					<div class="actions">
+                        <label for="done">
+                            <input type="checkbox" id="accept" value="yes">
+                        </label>
 						<button class="edit">Edit</button>
 						<button class="delete">Delete</button>
 					</div>
@@ -47,7 +51,5 @@
 			</div>
 		</section>
 	</main>
-
-	<script src="script2.js"></script>
 </body>
 </html>
