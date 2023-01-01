@@ -2,6 +2,7 @@ window.addEventListener('load', () => {
 	const form = document.querySelector("#form");
 	const input = document.querySelector("#newTaskInput");
 	const list_el = document.querySelector("#tasks");
+    let check = document.getElementById('clear');
 	form.addEventListener('submit', (e) => {
 		e.preventDefault();
 		const task = input.value;
@@ -58,6 +59,9 @@ window.addEventListener('load', () => {
 		task_delete_el.addEventListener('click', (e) => {
 			list_el.removeChild(task_el);
 		});
+        check.addEventListener('click', (e) =>{
+            window.location.reload();
+        });
         }
 	});
 });
