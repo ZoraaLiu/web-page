@@ -55,18 +55,17 @@ input, button {
 }
 
 #new-task-submit:hover {
-	opacity: 0.8;
+	opacity: 0.5;
 }
 
 #new-task-submit:active {
-	opacity: 0.6;
+	opacity: 0.5;
 }
 
 .task-list {
 	padding: 1rem;
 }
-
-.task-list h2 {
+h2 {
 	font-size: 1.5rem;
 	font-weight: 300;
 	color: var(--grey);
@@ -113,11 +112,11 @@ input, button {
 }
 
 .task .actions button:hover {
-	opacity: 0.8;
+	opacity: 1;
 }
 
 .task .actions button:active {
-	opacity: 0.6;
+	opacity: 1;
 }
 
 .task .actions .edit {
@@ -130,7 +129,6 @@ input, button {
 	color: rgb(225, 84, 112);
 }
 button{
-  border: none;
   color: white;
   text-align: center;
   font-size: 16px;
@@ -141,5 +139,5 @@ button{
   cursor: pointer;
 }
 button :hover{
-   color: #f5d8e7;
+   color: #f5d8e9;
 }
