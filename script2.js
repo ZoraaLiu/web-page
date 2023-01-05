@@ -4,7 +4,7 @@ window.addEventListener('load', () => {
 	const input = document.querySelector("#newTaskInput");
 	const list_el = document.querySelector("#tasks");
     let check = document.getElementById('clear');
-	const username = localStorage.getItem('username');
+	const username = localStorage.getElementById('username');
 	 name.value =username;
 	name.addEventListener('change', e => {
 		localStorage.setItem('username', e.target.value);

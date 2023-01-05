@@ -1,11 +1,11 @@
 :root {
-	--dark: #b5c7e4;
-	--darker: #f5f8d3; 
-	--darkest: #889bc5b4;
-	--grey: #444953;
-	--pink: #f5d8e7;
-	--purple: #d5ccec;
-	--light: rgb(104, 80, 198);
+	--color1: #b5c7e4;
+	--color2: #f5f8d3; 
+	--color3: #889bc5b4;
+	--color4: #444953;
+	--color5: #f5d8e7;
+	--color6: #d5ccec;
+	--color7: rgb(104, 80, 198);
 }
 
 
@@ -20,7 +20,7 @@ h1{
 	font-size: 2.5rem;
 	font-weight: 400;
 	margin-bottom: 3rem;
-    color:var(--grey);
+    color:var(--color4);
 }
 
 #form {
@@ -36,7 +36,7 @@ input, button {
 
 #newTaskInput{
 	flex: 1 1 0%;
-	background-color: var(--darker);
+	background-color: var(--color2);
 	padding: 1rem;
 	border-radius: 1rem;
 	margin-right: 1rem;
@@ -44,10 +44,10 @@ input, button {
 	font-size: 1.25rem;
 }
 #newTaskSubmit{
-	color: var(--pink);
+	color: var(--color5);
 	font-size: 1.25rem;
 	font-weight: 700;
-	background-image: linear-gradient(to right, var(--pink), var(--purple));
+	background-image: linear-gradient(to right, var(--color3), var(--color7));
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	cursor: pointer;
@@ -55,27 +55,40 @@ input, button {
 }
 
 #new-task-submit:hover {
-	opacity: 0.5;
+	opacity: 0.8;
 }
 
 #new-task-submit:active {
 	opacity: 0.5;
 }
 
-.task-list {
-	padding: 1rem;
-}
-h2 {
-	font-size: 1.5rem;
-	font-weight: 300;
-	color: var(--grey);
-	margin-bottom: 1rem;
+.name input{
+    color: var(--color4);
+    background: linear-gradient(200deg, var(--color1), var(--color6));
+    margin-left: 0.5 rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    width: 140px;
 }
 
+
+.name h2{
+    color: var(--color4);
+	margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-size: 2rem;
+}
+
+h4{
+    color:whitesmoke;
+    font-size: 20px;
+}
+s
 #tasks .task {
 	display: flex;
 	justify-content: space-between;
-	background-color: var(--darkest);
+	background-color: var(--color3);
 	padding: 1rem;
 	border-radius: 1rem;
 	margin-bottom: 1rem;
@@ -86,15 +99,15 @@ h2 {
 }
 
 .task .content .text {
-	color: var(--light);
+	color: var(--color7);
 	font-size: 1.125rem;
 	width: 100%;
 	display: block;
 	transition: 0.4s;
 }
 
-.task .content .text:not(:read-only) {
-	color: var(--pink);
+.task .content .text {
+	color: var(--color5);
 }
 
 .task .actions {
@@ -120,7 +133,7 @@ h2 {
 }
 
 .task .actions .edit {
-	background-image: linear-gradient(to right, var(--pink), var(--purple));
+	background-image: linear-gradient(to right, var(--color5), var(--purple));
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
@@ -139,5 +152,5 @@ button{
   cursor: pointer;
 }
 button :hover{
-   color: #f5d8e9;
+   color:var(--color5);
 }

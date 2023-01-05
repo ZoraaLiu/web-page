@@ -24,13 +24,13 @@ body{
     font-weight: bold;
     font-size: 50px;
     color:rgb(148, 148, 183);
-    top:50px
+    top:50px;
   }
   .all label{
     position: absoulte;
     top: 50%;
     left: 5p;
-    color:lightsteelblue;
+    color:white;
     transform: translateY(-50%);
     transition:.5s;
     
