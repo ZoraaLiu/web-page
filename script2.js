@@ -1,8 +1,14 @@
 window.addEventListener('load', () => {
+	const name = document.quuerySelector('#name')
 	const form = document.querySelector("#form");
 	const input = document.querySelector("#newTaskInput");
 	const list_el = document.querySelector("#tasks");
     let check = document.getElementById('clear');
+	const username = localStorage.getItem('username');
+	 name.value =username;
+	name.addEventListener('change', e => {
+		localStorage.setItem('username', e.target.value);
+	});
 	form.addEventListener('submit', (e) => {
 		e.preventDefault();
 		const task = input.value;
