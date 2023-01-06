@@ -1,14 +1,9 @@
 window.addEventListener('load', () => {
-	const name = document.quuerySelector('#name')
 	const form = document.querySelector("#form");
 	const input = document.querySelector("#newTaskInput");
-	const list_el = document.querySelector("#tasks");
+	const list_el = document.querySelector("#task");
     let check = document.getElementById('clear');
-	const username = localStorage.getElementById('username');
-	 name.value =username;
-	name.addEventListener('change', e => {
-		localStorage.setItem('username', e.target.value);
-	});
+
 	form.addEventListener('submit', (e) => {
 		e.preventDefault();
 		const task = input.value;
@@ -58,7 +53,7 @@ window.addEventListener('load', () => {
 				task_input_el.removeAttribute("readonly");
 				task_input_el.focus();
 			} else {
-				task_edit_el.innerText = "Edit";
+				task_edit_el.innerText = "EDIT";
 				task_input_el.setAttribute("readonly", "readonly");
 			}
 		});
