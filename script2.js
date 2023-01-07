@@ -1,22 +1,69 @@
+window.onload = function(){
+    var seconds = 00;
+    var minutes = 00;
+	//var hours = 00;
+    var OutputSeconds = document.getElementById("second");
+    var OutputMinutes = document.getElementById("minute");
+	//var OutputHours = document.getElementById("hour")
+    var buttonStart = document.getElementById("start");
+    var buttonStop = document.getElementById("stop");
+    var buttonReset = document.getElementById("reset");
+    var Interval;
+
+    buttonStart.addEventListener('click', (e) => {
+        Interval = setInterval(startTimer, 1000);  // millisecond 10 = 0.01 second
+    });
+
+    buttonStop.addEventListener('click', (e) => {
+		clearInterval(Interval);
+    });
+
+    buttonReset.addEventListener('click', (e) => {
+        clearInterval(Interval);
+		//hours ="00";
+        minutes = "00";
+        seconds = "00";
+		//OutputHours.innerHTML = hours;
+        OutputSeconds.innerHTML = seconds;
+        OutputMinutes.innerHTML = minutes;
+    });
+
+    function startTimer(){
+        seconds++;
+        if(seconds <= 9){
+            OutputSeconds.innerHTML = "0" + seconds;
+        }
+
+        if(seconds > 9){
+            OutputSeconds.innerHTML = seconds;
+        }
+
+        if(seconds > 60){
+            minutes++;
+            OutputMinutes.innerHTML = "0" + minutes;
+            seconds= 0;
+            OutputSeconds.innerHTML= "0" + 0;
+        }
+
+        if(minutes > 9){
+            OutputMinutes.innerHTML = minutes;
+        }
+		/*if(minutes > 60){
+			hours++;
+			OutputHours.innerHTML = "0" + hours;
+            minutes= 0;
+            OutputMinutes.innerHTML = "0" + 0;
+		}
+		if(hours > 9){
+			OutputHours.innerHTML = hours;
+		}*/
+    }
+}
 window.addEventListener('load', () => {
 	let form = document.querySelector("#form");
 	let input = document.querySelector("#newTaskInput");
 	let list = document.querySelector("#task");
     let check = document.getElementById('clear');
-	var timer;
-	var display = document.getElementById('timer');
-	(function(){
-			var sec = 0;
-			timer =setInterval(()=>{
-				display.innerHTML ='00:'+sec;
-				sec++;
-			},1000)
-	})()
-	function stopCounting(){
-		clearInterval(timer);
-	}
- 
-
 	form.addEventListener('submit', (e) => {
 		e.preventDefault();
 		const task = input.value;

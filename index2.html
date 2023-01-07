@@ -13,14 +13,14 @@
 	
 	<header>
         <div class="name">
-       <input id="username" type ="text"  placeholder="XXX" required>'s daily plan
+       <input id="username" type ="text"  placeholder="name" required>'s daily plan
        <div>
 	   <p></p>
-	   <div id="js_timer">
-			<div id = "timer">
-				00:00
-			</div>
-			<button onclick="stopCounting()">pause</button>
+	   <div class ="container">
+		<p id="time"><span id="hour">00</span>:<span id="minute">00</span>:<span id="second">00</span></p>
+			<button id="start">START</button>
+			<button id= "stop">PAUSE</button>
+			<button id= "reset">RESAT</button>
 	   </div>
     </header>
  
@@ -29,7 +29,7 @@
         <form id="form">
             <br>
 			<input type="text" name="newTaskInput" id="newTaskInput" placeholder="Enter task" />
-			<input type="submit" id="newTaskSubmit" />
+			<input type="submit" id="newTaskSubmit"/>
 		</form>
         <h2>A To Do List</h2>
         <button id="clear">RESTART</button>
