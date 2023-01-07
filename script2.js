@@ -1,16 +1,17 @@
 window.onload = function(){
     var seconds = 00;
     var minutes = 00;
-	//var hours = 00;
+	var hours = 00;
     var OutputSeconds = document.getElementById("second");
     var OutputMinutes = document.getElementById("minute");
-	//var OutputHours = document.getElementById("hour")
+	var OutputHours = document.getElementById("hour")
     var buttonStart = document.getElementById("start");
     var buttonStop = document.getElementById("stop");
     var buttonReset = document.getElementById("reset");
-    var Interval;
+    var Interval = null;
 
     buttonStart.addEventListener('click', (e) => {
+		clearInterval(Interval);
         Interval = setInterval(startTimer, 1000);  // millisecond 10 = 0.01 second
     });
 
@@ -20,10 +21,10 @@ window.onload = function(){
 
     buttonReset.addEventListener('click', (e) => {
         clearInterval(Interval);
-		//hours ="00";
+		hours ="00";
         minutes = "00";
         seconds = "00";
-		//OutputHours.innerHTML = hours;
+		OutputHours.innerHTML = hours;
         OutputSeconds.innerHTML = seconds;
         OutputMinutes.innerHTML = minutes;
     });
@@ -33,30 +34,28 @@ window.onload = function(){
         if(seconds <= 9){
             OutputSeconds.innerHTML = "0" + seconds;
         }
-
         if(seconds > 9){
             OutputSeconds.innerHTML = seconds;
         }
 
-        if(seconds > 60){
+        if(seconds >= 60){
             minutes++;
             OutputMinutes.innerHTML = "0" + minutes;
             seconds= 0;
             OutputSeconds.innerHTML= "0" + 0;
         }
-
         if(minutes > 9){
             OutputMinutes.innerHTML = minutes;
         }
-		/*if(minutes > 60){
+		if(minutes >=60){
 			hours++;
-			OutputHours.innerHTML = "0" + hours;
+			OutputHours.innerHTML = hours;
             minutes= 0;
             OutputMinutes.innerHTML = "0" + 0;
 		}
 		if(hours > 9){
 			OutputHours.innerHTML = hours;
-		}*/
+		}
     }
 }
 window.addEventListener('load', () => {
