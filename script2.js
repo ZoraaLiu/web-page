@@ -1,8 +1,21 @@
 window.addEventListener('load', () => {
-	const form = document.querySelector("#form");
-	const input = document.querySelector("#newTaskInput");
-	const list_el = document.querySelector("#task");
+	let form = document.querySelector("#form");
+	let input = document.querySelector("#newTaskInput");
+	let list = document.querySelector("#task");
     let check = document.getElementById('clear');
+	var timer;
+	var display = document.getElementById('timer');
+	(function(){
+			var sec = 0;
+			timer =setInterval(()=>{
+				display.innerHTML ='00:'+sec;
+				sec++;
+			},1000)
+	})()
+	function stopCounting(){
+		clearInterval(timer);
+	}
+ 
 
 	form.addEventListener('submit', (e) => {
 		e.preventDefault();
@@ -43,7 +56,7 @@ window.addEventListener('load', () => {
 
 		task_el.appendChild(task_actions_el);
 
-		list_el.appendChild(task_el);
+		list.appendChild(task_el);
 
 		input.value = '';
 
@@ -58,7 +71,7 @@ window.addEventListener('load', () => {
 			}
 		});
 		task_delete_el.addEventListener('click', (e) => {
-			list_el.removeChild(task_el);
+			list.removeChild(task_el);
 		});
         check.addEventListener('click', (e) =>{
             window.location.reload();

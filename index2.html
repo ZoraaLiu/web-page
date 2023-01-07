@@ -15,6 +15,13 @@
         <div class="name">
        <input id="username" type ="text"  placeholder="XXX" required>'s daily plan
        <div>
+	   <p></p>
+	   <div id="js_timer">
+			<div id = "timer">
+				00:00
+			</div>
+			<button onclick="stopCounting()">pause</button>
+	   </div>
     </header>
  
 	<main>
@@ -25,7 +32,7 @@
 			<input type="submit" id="newTaskSubmit" />
 		</form>
         <h2>A To Do List</h2>
-        <button id="clear">CLEAR ALL</button>
+        <button id="clear">RESTART</button>
 		<section class="task-list" id="task">
 	</main>
 </body>
