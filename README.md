@@ -7,3 +7,4 @@ The timer will help the user to trace the amount of time they spend on those tas
 start counting when the user press start. The user will also be able to pause the time whenever they want to stop. Also, they will be able to restart they time after finshing timing.
 
 
+<img width="1214" alt="Screen Shot 2023-01-18 at 11 12 06 PM" src="https://user-images.githubusercontent.com/113641057/213353552-2767a9dc-838d-4aef-8dc0-e8f6bd6de211.png">
